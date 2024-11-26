@@ -1,0 +1,117 @@
+/* Reseta as margens */
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 50px;
+    padding-left: 150px;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: right;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    padding: 0;
+    margin: 0;
+    padding-right: 150px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Seção de Introdução */
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #33a532;
+    color: white;
+}
+
+.intro h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* História em blocos */
+.history-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo */
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.block {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.block h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #33a532;
+}
+
+.block p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Seção de Qualidade */
+.quality {
+    text-align: center;
+    background-color: #e5efe4;
+    padding: 60px 20px;
+    margin-top: 40px;
+}
+
+.quality h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #33a532;
+    margin-bottom: 20px;
+}
+
+.quality p {
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}

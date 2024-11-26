@@ -1,0 +1,127 @@
+/* Reseta as margens */
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 50px;
+    padding-left: 150px;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: right;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    padding: 0;
+    margin: 0;
+    padding-right: 150px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #c8cfc7; /* Cor de fundo */
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    height: calc(100vh - 70px);
+    position: relative;
+    overflow: hidden; /* Garante que elementos não escapem da área visível */
+}
+
+.hero-text {
+    flex: 0 1 40%; /* Texto ocupa 40% do espaço */
+    max-width: 40%;
+    text-align: left;
+    padding-left: 150px;
+    z-index: 2; /* Texto sempre acima das imagens */
+    margin-top: 125px;
+}
+
+.hero-text h1 {
+    font-size: 85px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 80px;
+}
+
+/* Botão de navegação */
+.hero-bts {
+    margin-top: 10px; /* Espaço superior para distanciar do texto */
+}
+
+.hero-bts a {
+    display: inline-block; /* Permite controle de largura e altura */
+    padding: 12px 24px; /* Espaçamento interno do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    font-family: 'Quicksand', sans-serif; /* Fonte amigável */
+    font-weight: 600; /* Negrito para o texto */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: white; /* Cor do texto */
+    background-color: #33a532; /* Cor de fundo do botão */
+    border-radius: 50px; /* Bordas arredondadas */
+    transition: background-color 0.3s, transform 0.2s; /* Animação suave */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para realce */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+/* Efeito hover */
+.hero-bts a:hover {
+    background-color: #2e8b2e; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento no tamanho */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+/* Efeito ativo (ao clicar) */
+.hero-bts a:active {
+    transform: scale(0.95); /* Leve redução ao clicar */
+}
+
+.hero-images {
+    position: absolute;
+    right: 0; /* Alinha ao lado direito */
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%; /* Imagens ocupam 60% da largura da tela */
+    z-index: 1; /* Ficam atrás do texto */
+    padding-right: 150px;
+
+}
+
+.hero-images img {
+    height: 150%; /* As imagens ocupam toda a altura da seção */
+    width: auto; /* Proporção original */
+    object-fit: cover; /* Cobre o espaço disponível mantendo a proporção */
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolly - Produtos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleProducts.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/LogoDolly.png" alt="Logo da Dolly"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="compre.html">Compre Já</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Título da vitrine -->
+    <div class="title-banner">
+        <div class="marquee-text">
+            <div class="marquee-text-track">
+                <p>Novos Produtos Dolly</p>
+                <p>Novos Produtos Dolly</p>
+                <p>Novos Produtos Dolly</p>
+                <p>Novos Produtos Dolly</p>
+                <p>Novos Produtos Dolly</p>
+                <p>Novos Produtos Dolly</p>
+                <p>Novos Produtos Dolly</p>
+                <p>Novos Produtos Dolly</p>
+                <p>Novos Produtos Dolly</p>
+                <p>Novos Produtos Dolly</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Vitrine de Produtos -->
+    <section class="product-showcase">
+        <!-- Botão de navegação à esquerda -->
+        <button class="nav-btn left-btn" onclick="previousProduct()">←</button>
+
+        <!-- Informações do produto -->
+        <div class="product-info">
+            <h2 id="product-name">Produto A</h2>
+            <p id="product-size">150ml</p>
+            <p id="product-flavor">Sabor: Limão</p>
+        </div>
+
+        <!-- Imagem do produto -->
+        <div class="product-display">
+            <div class="product-image" id="product-image">
+                <img src="images/product1.png" alt="Produto A">
+            </div>
+        </div>
+
+        <!-- Botão de navegação à direita -->
+        <button class="nav-btn right-btn" onclick="nextProduct()">→</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

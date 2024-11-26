@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolly - Compre Já</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleBuy.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/LogoDolly.png" alt="Logo da Dolly"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="#">Compre Já</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Compra -->
+    <section class="buy-section">
+        <div class="product-selection">
+            <h2>Selecione o Produto</h2>
+            <div class="product" data-id="1">
+                <span>Dolly Cítrico 310ml</span>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <span class="count">0</span>
+                    <button class="increase">+</button>
+                </div>
+            </div>
+            <div class="product" data-id="2">
+                <span>Dolly Laranja 350ml</span>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <span class="count">0</span>
+                    <button class="increase">+</button>
+                </div>
+            </div>
+            <div class="product" data-id="3">
+                <span>Dolly Cola 600ml</span>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <span class="count">0</span>
+                    <button class="increase">+</button>
+                </div>
+            </div>
+            <div class="product" data-id="4">
+                <span>Dolly Cola 2L</span>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <span class="count">0</span>
+                    <button class="increase">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <h2>Adicione Seus Dados</h2>
+            <form id="orderForm">
+                <input type="text" placeholder="Nome" id="name" required>
+                <input type="text" placeholder="Sobrenome" id="surname" required>
+                <input type="email" placeholder="Email" id="email" required>
+                <input type="text" placeholder="Endereço" id="address" required>
+                <button type="button" id="buyNow">Comprar Agora</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Modal de Revisão -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-modal">&times;</button> <!-- Botão de fechar -->
+            <h3>Revisão do Pedido</h3>
+            <ul id="orderSummary"></ul>
+            <button id="confirmOrder">Confirmar Pedido</button>
+        </div>
+    </div>
+
+    <!-- Produtos Selecionados -->
+    <div id="selectedProducts" class="selected-products">
+        <h2>Produtos Selecionados</h2>
+        <div id="productImages" class="product-images"></div>
+    </div>
+    
+
+    <script src="buy.js"></script>
+</body>
+</html>

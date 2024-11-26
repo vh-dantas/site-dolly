@@ -1,0 +1,190 @@
+/* Reseta as margens e define o background */
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    background-color: #c8cfc7; /* Cor de fundo usada anteriormente */
+}
+
+/* Header */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 50px;
+    padding-left: 150px;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: right;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    padding: 0;
+    margin: 0;
+    padding-right: 150px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Faixa verde atrás do título */
+.title-banner {
+    position: absolute;
+    top: 70px; /* Posiciona abaixo do header */
+    width: 100%; /* Ocupa toda a largura */
+    height: 80px; /* Ajuste a altura conforme necessário */
+    background-color: #33a532; /* Mesma cor do botão */
+    overflow: hidden; /* Garante que o texto não escape da faixa */
+    z-index: 1; /* Fica atrás do texto principal */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+}
+
+/* Marquee para o texto animado */
+.marquee-text {
+    overflow: clip;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.marquee-text p {
+    border: 1px solid white;
+    border-radius: 999px;
+    padding: 5px 15px;
+}
+
+.marquee-text-track {
+    display: flex;
+    padding-left: 60px;
+    gap: 60px;
+    width: max-content;
+    animation: scroll-left 10s linear infinite;
+}
+
+/* Animação de deslizar para a esquerda */
+@keyframes scroll-left {
+    to {
+        transform: translateX(-50%); /* Começa visível */
+    }
+}
+
+/* Seção da vitrine */
+.product-showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 70px); /* Preenche a tela abaixo do header */
+    position: relative;
+}
+
+/* Botões de navegação */
+.nav-btn {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s, background-color 0.3s;
+    position: absolute; /* Para permitir o posicionamento mais próximo */
+    top: 50%; /* Centraliza verticalmente em relação à seção */
+    transform: translateY(-50%); /* Ajusta a posição com precisão */
+    z-index: 2; /* Garante que os botões fiquem acima das imagens */
+}
+
+/* Botão esquerdo */
+.left-btn {
+    left: 15%; /* Aproxima do texto */
+}
+
+/* Botão direito */
+.right-btn {
+    right: 15%; /* Aproxima da imagem */
+}
+
+/* Hover e Ativo */
+.nav-btn:hover {
+    background-color: #cccccc;
+    transform: translateY(-50%) scale(1.1); /* Suaviza o hover */
+}
+
+.nav-btn:active {
+    transform: translateY(-50%) scale(0.95); /* Leve redução ao clicar */
+}
+
+
+/* Informações do produto */
+.product-info {
+    flex: 1;
+    text-align: right;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente as informações */
+    gap: 10px; /* Espaço entre linhas */
+}
+
+.product-info h2 {
+    font-size: 28px; /* Aumenta o título */
+    font-weight: 700;
+    margin: 0;
+}
+
+.product-info p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Imagem do produto */
+.product-display {
+    flex: 1; /* Mesma proporção das informações */
+    display: flex;
+    justify-content: flex-start; /* Junta a imagem às informações */
+    align-items: center;
+}
+
+/* Contêiner da imagem */
+.product-image {
+    width: 300px; /* Largura fixa */
+    height: 300px; /* Altura fixa */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: transparent; /* Pode ser alterado para um fundo padrão, se necessário */
+}
+
+/* Imagem do produto */
+.product-image img {
+    max-width: 300%; /* Escala proporcionalmente com a largura */
+    max-height: 300%; /* Escala proporcionalmente com a altura */
+    object-fit: contain; /* Mantém a proporção dentro do contêiner */
+}
+
+/* Regra para produtos com imagens grandes */
+.product-image.product-large img {
+    max-width: 200%; /* Reduz a largura proporcionalmente */
+    max-height: 200%; /* Reduz a altura proporcionalmente */
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+

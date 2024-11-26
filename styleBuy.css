@@ -1,0 +1,209 @@
+/* Reseta as margens */
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    background-color: #c8cfc7;
+}
+
+/* Header */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 50px;
+    padding-left: 150px;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: right;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    padding: 0;
+    margin: 0;
+    padding-right: 150px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Seção de Compra */
+.buy-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.product-selection, .user-info {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 45%;
+}
+
+.product-selection h2, .user-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #33a532;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2a8d29;
+}
+
+/* Estilo para a seção do formulário */
+form {
+    display: flex;
+    flex-direction: column; /* Campos em uma coluna */
+    gap: 15px; /* Espaçamento entre os elementos */
+    margin-top: 20px; /* Espaçamento acima do formulário */
+}
+
+form input {
+    padding: 10px; /* Espaçamento interno nos campos */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 1px solid #ccc; /* Bordas dos campos */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    outline: none; /* Remove o contorno ao focar */
+}
+
+form input:focus {
+    border-color: #33a532; /* Cor verde ao focar */
+    box-shadow: 0px 2px 6px rgba(51, 165, 50, 0.4); /* Realce da sombra */
+}
+
+form button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #33a532; /* Cor verde */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para realce */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #2e8b2e; /* Cor mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Elevação ao passar o mouse */
+}
+
+form button:active {
+    transform: translateY(1px); /* Redução ao clicar */
+    background-color: #2c7f2c; /* Tom mais escuro ao clicar */
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Botão de fechar no modal */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #ff0000; /* Cor de destaque ao passar o mouse */
+}
+
+/* Contêiner de produtos selecionados */
+.selected-products {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.selected-products h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product-images {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens ocupem várias linhas se necessário */
+    justify-content: center;
+    gap: 15px;
+}
+
+.product-images img {
+    width: 100px;
+    height: 150px;
+    object-fit: contain; /* Mantém a proporção da imagem */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
